@@ -15,6 +15,7 @@ def billing():
             assert price > 0, "Price must be a positive number."
             quantity = int(input(f"Enter quantity of {name}: "))
             assert quantity > 0, "Quantity must be a positive integer."
+            
             Amount=price*quantity
             items.append((((name, price , quantity,Amount))))
             total += Amount
@@ -30,6 +31,7 @@ def billing():
         #to set the alignment of the text in the receipt
         print("{:<15} {:>10} {:>17} {:>17}".format("Item", "Price (Rs)","Quantity","Amount"))
         print("-"*62)
+
         #Accesing the items list to print the receipt
         for name, price , quantity , Amount in items:
             print("{:<15} {:>8.2f} {:>15} {:>20}".format(name, price ,quantity,Amount))
@@ -38,6 +40,7 @@ def billing():
         print("{:<15} {:>46}".format("Tips", tips))
         print("{:<15} {:>46}".format("Total Bill", total))
         print("="*62)
+        
         print("{:>45}".format("Thanks for visiting us !"))
     except AssertionError as e:
                 print(f"Error: {e}")
