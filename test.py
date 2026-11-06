@@ -27,8 +27,10 @@ def billing():
     
         # Print receipt
         print("="*62)
+        #to set the alignment of the text in the receipt
         print("{:<15} {:>10} {:>17} {:>17}".format("Item", "Price (Rs)","Quantity","Amount"))
         print("-"*62)
+        #Accesing the items list to print the receipt
         for name, price , quantity , Amount in items:
             print("{:<15} {:>8.2f} {:>15} {:>20}".format(name, price ,quantity,Amount))
         print("-"*62)
