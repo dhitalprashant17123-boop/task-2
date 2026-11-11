@@ -17,7 +17,7 @@ def billing():
             assert quantity > 0, "Quantity must be a positive integer."
             
             Amount=price*quantity
-            items.append((((name, price , quantity,Amount))))
+            items.append((name, price , quantity,Amount))
             total += Amount
         subtotal=total
 
